@@ -1,2 +1,2 @@
-# CNPM_NHOM1_DCT121C3
+# Day la branch cua Vuong Tieu Cuong
 - Đây là repo front-end.
