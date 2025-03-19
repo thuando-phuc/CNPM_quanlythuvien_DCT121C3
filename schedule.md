@@ -18,3 +18,8 @@ Lưu ý phải có trang bìa, mục lục, danh sách phân công thành viên 
               Link: https://github.com/VuongTCuong/Library-website-react
 + 05/03/2025: Viết Proposal (Done)
 + 10/03/2025: Làm bài tập Classroom
++ 19/03/2025: 
+  - Báo cáo BE|Link:https://github.com/kieenn/Library-management-system.git
+  - Hướng dẫn sử dụng API|Link: https://docs.google.com/document/d/1sboqo1rZwLfet6rIEtErIywYWrO6U376/edit?usp=sharing&ouid=103533585045115769372&rtpof=true&sd=true
+  - Thiết kế ERD|Link:https://drive.google.com/file/d/1KnmJQICdpzZTi60MIqWKgXdZXjH8-d3b/view?usp=sharing
+  
