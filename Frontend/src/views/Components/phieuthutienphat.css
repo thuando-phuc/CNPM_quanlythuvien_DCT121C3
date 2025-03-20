@@ -1,0 +1,11 @@
+#phieuthu{
+    background-color: rgb(248, 232, 225);
+    width:800px;
+    height:410px;
+    position: absolute;
+    top:30%;
+    left:30%;
+    border-style:solid;
+    border-radius: 10px;
+    border-color:#ffb68c;
+}
