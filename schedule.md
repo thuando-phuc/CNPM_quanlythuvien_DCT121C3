@@ -20,6 +20,3 @@ Lưu ý phải có trang bìa, mục lục, danh sách phân công thành viên 
 + 05/03/2025: Viết Proposal https://drive.google.com/file/d/1Az7zNMwFQx140WwiMCf6AX7x8J0t226g/view
             <br> Viết Project Plan https://drive.google.com/file/d/10ewIVT1QoEFAciLQyawHg2wlTFQwNV39/view
 + 10/03/2025: Làm bài tập Classroom
-+ 11/03/2025: Kiểm tra git hub quản lý dự án
-+ 12/3/2025: Làm BT2_SE_Requirements https://drive.google.com/drive/folders/1x2TZvs4WOALJ0eT4L1uXU4IMynCRSdeS
-+ 19/3/2025: Làm BT3_SE_BusinessUseCase Link:https://drive.google.com/file/d/1cGj6tOsYUZUalyBVwaNZnUCUti8ypGdY/view
