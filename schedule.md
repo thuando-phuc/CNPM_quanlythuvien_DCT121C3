@@ -20,3 +20,4 @@ Lưu ý phải có trang bìa, mục lục, danh sách phân công thành viên 
 + 05/03/2025: Viết Proposal https://drive.google.com/file/d/1Az7zNMwFQx140WwiMCf6AX7x8J0t226g/view
             <br> Viết Project Plan https://drive.google.com/file/d/10ewIVT1QoEFAciLQyawHg2wlTFQwNV39/view
 + 10/03/2025: Làm bài tập Classroom
+
