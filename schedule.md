@@ -1,37 +1,52 @@
-# Hoạt động quản lí dự án
-Member: Mai Nguyễn Trung Kiên, Đỗ Phúc Thuận, Vương Tiểu Cường
-## Project Proposal: 
-  Link: https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/blob/main/Lab3_ProjectProposal_Nhom1.docx
-## Project Plan Ver 1: 
-  Link
-## Bản báo cáo khảo sát hiện trạng: 
-  Lab1: https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/tree/main/Lab1_Nhom1_KhaoSatHienTrang <br>
-  HW1: https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/tree/main/HW1_Nhom1_KhaoSatHienTrang
+# 📊 Project Management Activities
 
-Nộp bản mềm trên classroom:
-+ Lab3_ProjectProposal_Nhom??_HoTen_MaSV.docx (done)
-+ Lab3_ProjectPlan_Nhom??_HoTen_MaSV.docx (procesing)
-Lưu ý phải có trang bìa, mục lục, danh sách phân công thành viên và nội dung.
+## 👥 Team Members
+- Mai Nguyễn Trung Kiên
+- Đỗ Phúc Thuận  
+- Vương Tiểu Cường
 
-# Schedule
-+ 27/02/2025: Làm [Lab1] Khảo sát hiện trạng hệ thống (Nhóm) https://drive.google.com/file/d/1sSGyI9ppWuXlvaVksXtwofrzRu0Lv_jq/view
-+ 04/03/2025: Báo cáo FE (Đã gửi các ảnh màn hình FE)
-              Link: https://github.com/VuongTCuong/Library-website-react
-+ 05/03/2025: Viết Proposal https://drive.google.com/file/d/1Az7zNMwFQx140WwiMCf6AX7x8J0t226g/view
-            <br> Viết Project Plan https://drive.google.com/file/d/10ewIVT1QoEFAciLQyawHg2wlTFQwNV39/view
-+ 10/03/2025: Làm bài tập Classroom
-+ 11/03/2025: Kiểm tra git hub quản lý dự án
-+ 12/3/2025: Làm BT2_SE_Requirements https://drive.google.com/drive/folders/1x2TZvs4WOALJ0eT4L1uXU4IMynCRSdeS
-+ 19/3/2025: Làm BT3_SE_BusinessUseCase Link:https://drive.google.com/file/d/1cGj6tOsYUZUalyBVwaNZnUCUti8ypGdY/view
-+ 19/03/2025: 
-  - Báo cáo BE|Link:https://github.com/kieenn/Library-management-system.git
-  - Hướng dẫn sử dụng API|Link: https://docs.google.com/document/d/1sboqo1rZwLfet6rIEtErIywYWrO6U376/edit?usp=sharing&ouid=103533585045115769372&rtpof=true&sd=true
-  - Thiết kế ERD|Link:https://drive.google.com/file/d/1KnmJQICdpzZTi60MIqWKgXdZXjH8-d3b/view?usp=sharing
-+ 20/03/2025:
-  - Update responsive cho FE
-+ 21/03/2025:
-  - Update và Add new functions và API cho BE: https://github.com/kieenn/Library-management-system
-  - Update hướng dẫn sử dụng API: https://docs.google.com/document/d/1sboqo1rZwLfet6rIEtErIywYWrO6U376/edit?usp=sharing&ouid=103533585045115769372&rtpof=true&sd=true
-  - Test API: https://drive.google.com/file/d/1UmMbHk0wYfLWuB9NMZGx44OYiREOge2I/view?usp=sharing
-+ 21/03/2025:
-  - Update erd
+## 📑 Key Documents
+
+### Project Proposal
+[![Project Proposal](https://img.shields.io/badge/View-Proposal-blue)](https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/blob/main/Lab3_ProjectProposal_Nhom1.docx)
+
+### Project Plan v1.0
+*Link pending*
+
+### System Analysis Reports
+- [Lab 1 Report](https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/tree/main/Lab1_Nhom1_KhaoSatHienTrang)
+- [Homework 1 Report](https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/tree/main/HW1_Nhom1_KhaoSatHienTrang)
+
+## 📝 Submission Requirements
+Please submit the following documents on Classroom:
+
+- ✅ `Lab3_ProjectProposal_Nhom??_HoTen_MaSV.docx` (Completed)
+- 🔄 `Lab3_ProjectPlan_Nhom??_HoTen_MaSV.docx` (In Progress)
+
+**Note:** All documents must include cover page, table of contents, team member assignments, and content.
+
+## 📅 Project Timeline
+
+### February 2025
+- **27th** - System Analysis [Lab 1] ([View Details](https://drive.google.com/file/d/1sSGyI9ppWuXlvaVksXtwofrzRu0Lv_jq/view))
+
+### March 2025
+- **4th** - Frontend Report ([View Repository](https://github.com/VuongTCuong/Library-website-react))
+- **5th** - Documentation
+  - [Project Proposal](https://drive.google.com/file/d/1Az7zNMwFQx140WwiMCf6AX7x8J0t226g/view)
+  - [Project Plan](https://drive.google.com/file/d/10ewIVT1QoEFAciLQyawHg2wlTFQwNV39/view)
+- **10th** - Classroom Assignment Submission
+- **11th** - GitHub Project Management Review
+- **12th** - SE Requirements Assignment ([View Assignment](https://drive.google.com/drive/folders/1x2TZvs4WOALJ0eT4L1uXU4IMynCRSdeS))
+- **19th** - Development Milestones
+  - Business Use Case Documentation ([View Document](https://drive.google.com/file/d/1cGj6tOsYUZUalyBVwaNZnUCUti8ypGdY/view))
+  - Backend Development
+    - [Repository](https://github.com/kieenn/Library-management-system.git)
+    - [API Documentation](https://docs.google.com/document/d/1sboqo1rZwLfet6rIEtErIywYWrO6U376/edit)
+    - [ERD Design](https://drive.google.com/file/d/1KnmJQICdpzZTi60MIqWKgXdZXjH8-d3b/view)
+- **20th** - Frontend Responsive Design Implementation
+- **21st** - Backend Updates
+  - API Enhancement & New Features ([View Repository](https://github.com/kieenn/Library-management-system))
+  - [Updated API Documentation](https://docs.google.com/document/d/1sboqo1rZwLfet6rIEtErIywYWrO6U376/edit)
+  - [API Testing Results](https://drive.google.com/file/d/1UmMbHk0wYfLWuB9NMZGx44OYiREOge2I/view)
+  - ERD Updates
