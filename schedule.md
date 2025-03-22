@@ -10,20 +10,13 @@
 ### Project Proposal
 [![Project Proposal](https://img.shields.io/badge/View-Proposal-blue)](https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/blob/main/Lab3_ProjectProposal_Nhom1.docx)
 
-### Project Plan v1.0
-*Link pending*
+### Project Plan 
+[![Project Plan](https://img.shields.io/badge/View-Proposal-blue)](https://github.com/thuando-phuc/CNPM_quanlythuvien_DCT121C3/blob/main/Lab3_ProjectPlan_Nhom1.docx)
 
-### System Analysis Reports
+### Reports
 - [Lab 1 Report](https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/tree/main/Lab1_Nhom1_KhaoSatHienTrang)
 - [Homework 1 Report](https://github.com/thuando-phuc/cnpm-quanlyduan-nhom1/tree/main/HW1_Nhom1_KhaoSatHienTrang)
 
-## 📝 Submission Requirements
-Please submit the following documents on Classroom:
-
-- ✅ `Lab3_ProjectProposal_Nhom??_HoTen_MaSV.docx` (Completed)
-- 🔄 `Lab3_ProjectPlan_Nhom??_HoTen_MaSV.docx` (In Progress)
-
-**Note:** All documents must include cover page, table of contents, team member assignments, and content.
 
 ## 📅 Project Timeline
 
