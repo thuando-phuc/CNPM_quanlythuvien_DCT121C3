@@ -1,0 +1,110 @@
+#muonsach{
+    background-color: rgb(248, 232, 225);
+    width:950px;
+    height:750px;
+    position: absolute;
+    top:10%;
+    left:27%;
+    border-style:solid;
+    border-radius: 10px;
+    border-color:#ffb68c;
+
+}
+.underline_muonsach{
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    background-color: #ffb68c;
+    border-radius: 15px;
+    top:29px;
+    left:440px;
+    
+}
+.table_muonsach{
+    width:930px;
+    margin: 0px auto;
+    border-collapse: collapse;
+    font-size:15px;
+}
+.table_muonsach tr th{
+    text-align: left;
+    background-color: rgb(245, 200, 164);
+    color:#383838;
+    font-weight: bold;
+    padding: 0px 0px 0px 10px;
+}
+.table_muonsach tr td{
+    background-color: #ffffff;
+    padding: 10px 0px 10px 10px;
+}
+
+.table_muonsach tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.table_muonsach tbody tr:last-of-type{
+    border-bottom: 2px solid #4e2515;
+}
+.tableContainer{
+    height: 270px;
+    
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+Table thead{
+    position: sticky;
+    top: 0px;
+    margin: 0 0 0 0;
+}
+.table_muonsach tbody tr td input{
+    border-radius:0px;
+    border-width: 0px 0px 1px 0px;
+}
+.search{
+    border:None;
+    background-color: transparent;
+    margin-left:10px;
+    cursor: pointer;
+}
+.add-row{
+    width:25px;
+    height:25px;
+    background-color: rgb(245, 200, 164);
+    border-style:solid;
+    border-color:black;
+    border-radius: 7px;
+    margin-left:1%;
+    margin-top:1%;
+}
+.delete-row{
+    width:25px;
+    height:25px;
+    background-color: rgb(245, 200, 164);
+    border-style:solid;
+    border-color:black;
+    border-radius: 7px;
+    margin-left:77%;
+    margin-top:1%;
+
+}
+.add-row:hover, .delete-row:hover{
+    background-color: rgb(223, 166, 119);
+    color:rgb(255, 255, 255);  
+}
+
+.submit-button-muonsach{
+    width:100px;
+    height:25px;
+    background-color: rgb(245, 200, 164);
+    border-style:solid;
+    border-color:black;
+    border-radius: 15px;
+    margin-left:10px;
+  
+}
+.submit-button-muonsach:hover{
+    background-color: rgb(223, 166, 119);
+    color:rgb(255, 255, 255);  
+}
+

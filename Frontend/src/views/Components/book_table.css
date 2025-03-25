@@ -1,0 +1,67 @@
+#table_container{
+    width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:7%;
+    display:flex;
+    flex-direction: column;
+}
+.searchbar{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 28px;
+    background-color: #f1f1f1;
+    height: 10px;
+    margin-left:auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.search-input{
+    font-size:17px;
+    color: #333333;
+    margin-left:14px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    flex:1;
+}
+.book_table{
+    width:1150px;
+    margin: 0px auto;
+    border-collapse: collapse;
+    font-size:15px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.number-page{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color:black;
+    border-width:2px;
+    border-radius: 10px;
+    margin-left:44px;
+}
+.book_table tr th{
+    text-align: left;
+    background-color: rgb(245, 200, 164);
+    color:#383838;
+    font-weight: bold;
+    padding: 0px 0px 0px 10px;
+}
+.book_table tr td{
+    background-color: #ffffff;
+    padding: 10px 0px 10px 10px;
+}
+
+.book_table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.book_table tbody tr:last-of-type{
+    border-bottom: 2px solid #4e2515;
+}

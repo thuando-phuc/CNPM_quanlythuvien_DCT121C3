@@ -1,0 +1,21 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    zoom: .8;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  html {
+    zoom: .9;        
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  html {
+    zoom: 1;
+  }
+}

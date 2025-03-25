@@ -1,0 +1,13 @@
+.chucnang_button{
+    width:100px;
+    height:20px;
+    background-color: rgb(245, 200, 164);
+    border-style:solid;
+    border-color:black;
+    border-radius: 15px;
+    margin-right:10px;
+}
+.chucnang_button:hover{
+    background-color: rgb(223, 166, 119);
+    color:rgb(255, 255, 255);  
+}
