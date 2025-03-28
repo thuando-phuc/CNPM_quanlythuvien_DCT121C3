@@ -43,5 +43,7 @@
   - [Updated API Documentation](https://docs.google.com/document/d/1sboqo1rZwLfet6rIEtErIywYWrO6U376/edit)
   - [API Testing Results](https://drive.google.com/file/d/1UmMbHk0wYfLWuB9NMZGx44OYiREOge2I/view)
   - ERD Updates
-- **28th** - Database Updates
+- **28th** - DB updates
+  - [final erd](https://drive.google.com/file/d/1KnmJQICdpzZTi60MIqWKgXdZXjH8-d3b/view?usp=sharing)
+  - [erm base on erd](https://docs.google.com/document/d/1DvgmP_37YOZ8pSUcwqcgdbtuR9nDgEWh/edit?usp=sharing&ouid=103533585045115769372&rtpof=true&sd=true)
   - Update database, add sample data
