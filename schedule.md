@@ -47,3 +47,6 @@
   - [final erd](https://drive.google.com/file/d/1KnmJQICdpzZTi60MIqWKgXdZXjH8-d3b/view?usp=sharing)
   - [erm base on erd](https://docs.google.com/document/d/1DvgmP_37YOZ8pSUcwqcgdbtuR9nDgEWh/edit?usp=sharing&ouid=103533585045115769372&rtpof=true&sd=true)
   - Update database, add sample data
+### April 2025
+- **1st** - DB updates
+  - add new sample data to db
