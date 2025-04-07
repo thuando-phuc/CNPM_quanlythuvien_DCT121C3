@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.8">
+  <diagram name="Page-1" id="Hx3yiYXgutR7kxoWT-ri">
+    <mxGraphModel dx="2278" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-1" target="_CmmK9YaeAN9pF8ZJzLs-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="190" y="90" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="340" y="575" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-3" value="Bắt đầu vào tuần cuối cùng của khóa học." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="40" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-4" target="_CmmK9YaeAN9pF8ZJzLs-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-4" value="&lt;br&gt;Giáo viên thông báo lịch thi cuối khóa&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="305" y="75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-6" target="_CmmK9YaeAN9pF8ZJzLs-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-6" value="&lt;div&gt;Giáo viên tiến hành giảng dạy theo kế hoạch&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="305" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-7" target="_CmmK9YaeAN9pF8ZJzLs-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-7" value="&lt;div&gt;Kết thúc khóa học&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-9" target="_CmmK9YaeAN9pF8ZJzLs-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-9" value="&lt;div&gt;Học viên hoàn thành khóa học&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-12" target="_CmmK9YaeAN9pF8ZJzLs-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-12" value="&lt;div&gt;Giáo viên tổ chức thi cuối khóa tại lớp&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-14" target="_CmmK9YaeAN9pF8ZJzLs-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-14" value="&lt;div&gt;Giáo viên chấm bài thi&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="130" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-16" target="_CmmK9YaeAN9pF8ZJzLs-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-16" value="&lt;div&gt;Giáo viên gửi điểm thi cho giáo vụ&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="305" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-19" target="_CmmK9YaeAN9pF8ZJzLs-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-19" value="&lt;div&gt;Giáo vụ nhận điểm thi từ giáo viên&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="305" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-21" target="_CmmK9YaeAN9pF8ZJzLs-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-21" value="&lt;div&gt;Giáo vụ ghi nhận kết quả thi vào hồ sơ học viên&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-23" target="_CmmK9YaeAN9pF8ZJzLs-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-23" value="&lt;div&gt;Cập nhật kết quả thi vào hệ thống&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-25" target="_CmmK9YaeAN9pF8ZJzLs-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-25" value="&lt;div&gt;Cập nhật kết quả thi vào hệ thống&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_CmmK9YaeAN9pF8ZJzLs-27" target="_CmmK9YaeAN9pF8ZJzLs-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-27" value="&lt;div&gt;Xét các trường hợp giảm học phí (nếu có)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_CmmK9YaeAN9pF8ZJzLs-29" value="Kết thúc" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="575" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
