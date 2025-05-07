@@ -6,7 +6,7 @@ function User(){
         navigate("/");      
     }
     return(
-        <div id="user-info">
+        <div id="user-info" >
                 <center>Thông tin</center><br></br>
                 <div className='info'>
                     <div className="label">Họ tên:</div>
@@ -22,7 +22,7 @@ function User(){
                     </div>
                 <div className="info">
                     <div className="label">Chức vụ:</div>
-                    <span className="result">Nhân viên quản lí</span>
+                <span className="result">Nhân viên quản lí</span>
                 </div>
                 <div className="div-button">
                     <button className='button'>Đổi mật khẩu</button>
