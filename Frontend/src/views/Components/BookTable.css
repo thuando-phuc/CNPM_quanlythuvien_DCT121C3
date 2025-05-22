@@ -1,0 +1,101 @@
+/* d:\project\CNPM_quanlythuvien_DCT121C3\Frontend\src\views\Components\BookTable.css */
+
+.book-table-container {
+  margin-top: 20px;
+  /* padding: 0px; */ /* Bỏ padding nếu không cần thiết khi không có background */
+  /* background-color: #f9f9f9; */ /* Bỏ màu nền của container */
+  /* border-radius: 8px; */ /* Bỏ bo góc của container nếu chỉ muốn bo góc cho table */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */ /* Bỏ bóng đổ của container nếu muốn table tự có bóng */
+}
+
+.book-table-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px; /* Increased margin for better spacing */
+  font-size: 1.5em; /* Kích thước tiêu đề */
+}
+
+.book-table-container table {
+  width: 100%;
+  border-collapse: collapse; /* Gộp đường viền của các ô */
+  font-size: 0.9em; /* Kích thước chữ trong bảng */
+  border-radius: 10px; /* Thêm bo góc cho bảng */
+  overflow: hidden; /* Quan trọng: để bo góc hoạt động đúng với các ô bên trong */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; /* Shadow similar to menu, adjusted */
+  border: 2px solid #ffb68c; /* Border color from menu */
+  background-color: white; /* Background for the table itself */
+}
+
+.book-table-container th,
+.book-table-container td {
+  border-bottom: 1px solid #ffb68c; /* Bottom border for rows, using menu color */
+  border-left: 1px solid #ffb68c; /* Optional: if you want vertical lines too */
+  padding: 10px 12px; /* Tăng padding cho dễ đọc */
+  text-align: left; /* Căn lề trái cho nội dung ô */
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+.book-table-container th:first-child,
+.book-table-container td:first-child {
+  border-left: none; /* Remove left border for the first cell in a row */
+}
+
+.book-table-container th {
+  background-color: white; /* Header background same as menu items */
+  color: #333; /* Darker text color for header */
+  font-weight: bold; /* Chữ đậm cho header */
+  text-transform: uppercase; /* Viết hoa chữ cái đầu của header */
+  letter-spacing: 0.5px;
+  border-bottom-width: 3px; /* Thicker bottom border for header, like .selection */
+}
+
+/* Bo góc cho ô đầu tiên và cuối cùng của hàng header */
+.book-table-container thead tr th:first-child {
+  border-top-left-radius: 7px; /* Adjusted for table's border-radius and border width */
+}
+
+.book-table-container thead tr th:last-child {
+  border-top-right-radius: 7px;
+}
+
+.book-table-container tbody tr:nth-child(even) {
+  background-color: #fff7f2; /* Lighter shade for even rows, derived from menu hover */
+}
+
+.book-table-container tbody tr:hover {
+  background-color: #ffeee4; /* Hover color from menu */
+  cursor: pointer; /* Thay đổi con trỏ chuột */
+  font-weight: normal; /* Keep font weight normal or bold as per preference */
+}
+
+.book-table-container button {
+  padding: 6px 12px;
+  font-size: 0.85em;
+  color: #fff;
+  background-color: #007bff; /* Màu nút chính */
+  border: 1px solid #007bff; /* Adding a subtle border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.book-table-container button:hover {
+  background-color: #0056b3; /* Màu nút khi di chuột qua */
+  border-color: #0056b3;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .book-table-container th,
+  .book-table-container td {
+    padding: 8px;
+    font-size: 0.85em;
+  }
+  .book-table-container h2 {
+    font-size: 1.3em;
+  }
+  .book-table-container button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+}
+    

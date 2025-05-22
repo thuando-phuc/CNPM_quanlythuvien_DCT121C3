@@ -1,110 +1,203 @@
-#muonsach{
-    background-color: rgb(248, 232, 225);
-    width:950px;
-    height:750px;
-    position: absolute;
-    top:10%;
-    left:27%;
-    border-style:solid;
-    border-radius: 10px;
-    border-color:#ffb68c;
+/* d:\project\CNPM_quanlythuvien_DCT121C3\Frontend\src\views\Components\muonsach.css */
 
+/* Kế thừa style modal chung từ lapthedocgia.css hoặc tiepnhansachmoi.css nếu muốn */
+/* Ví dụ: @import './lapthedocgia.css'; */
+
+/* Hoặc định nghĩa lại các style modal cơ bản */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
-.underline_muonsach{
+
+#muonsach_modal {
+    background-color: rgb(248, 232, 225);
+    width: 900px; /* Rộng hơn để chứa bảng */
+    min-height: 600px;
+    position: relative;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #ffb68c;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.title_modal {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.underline_modal {
     position: absolute;
-    width: 70px;
+    width: 100px;
     height: 4px;
     background-color: #ffb68c;
     border-radius: 15px;
-    top:29px;
-    left:440px;
-    
-}
-.table_muonsach{
-    width:930px;
-    margin: 0px auto;
-    border-collapse: collapse;
-    font-size:15px;
-}
-.table_muonsach tr th{
-    text-align: left;
-    background-color: rgb(245, 200, 164);
-    color:#383838;
-    font-weight: bold;
-    padding: 0px 0px 0px 10px;
-}
-.table_muonsach tr td{
-    background-color: #ffffff;
-    padding: 10px 0px 10px 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.table_muonsach tbody tr{
-    border-bottom: 1px solid #dddddd;
-}
-
-.table_muonsach tbody tr:last-of-type{
-    border-bottom: 2px solid #4e2515;
-}
-.tableContainer{
-    height: 270px;
-    
-    overflow: scroll;
-    overflow-x: auto;
-    overflow-y: auto;
-}
-Table thead{
-    position: sticky;
-    top: 0px;
-    margin: 0 0 0 0;
-}
-.table_muonsach tbody tr td input{
-    border-radius:0px;
-    border-width: 0px 0px 1px 0px;
-}
-.search{
-    border:None;
+.hide_modal {
+    position: absolute;
     background-color: transparent;
-    margin-left:10px;
+    border: none;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #777;
     cursor: pointer;
 }
-.add-row{
-    width:25px;
-    height:25px;
-    background-color: rgb(245, 200, 164);
-    border-style:solid;
-    border-color:black;
-    border-radius: 7px;
-    margin-left:1%;
-    margin-top:1%;
-}
-.delete-row{
-    width:25px;
-    height:25px;
-    background-color: rgb(245, 200, 164);
-    border-style:solid;
-    border-color:black;
-    border-radius: 7px;
-    margin-left:77%;
-    margin-top:1%;
-
-}
-.add-row:hover, .delete-row:hover{
-    background-color: rgb(223, 166, 119);
-    color:rgb(255, 255, 255);  
+.hide_modal:hover {
+    color: #333;
 }
 
-.submit-button-muonsach{
-    width:100px;
-    height:25px;
-    background-color: rgb(245, 200, 164);
-    border-style:solid;
-    border-color:black;
+.label_modal {
+    width: 150px; /* Hoặc điều chỉnh cho phù hợp */
+    font-weight: bold;
+    color: #555;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.input_modal {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 2px solid #ffb68c;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.input_modal:focus {
+    border-color: #ff7f2a;
+    box-shadow: 0 0 0 3px rgba(255, 127, 42, 0.25);
+    outline: none;
+}
+
+.div_input_group_modal {
+    margin-bottom: 12px; /* Giảm khoảng cách một chút */
+    display: flex;
+    align-items: center;
+}
+
+.submit_button_modal {
+    padding: 10px 20px;
+    background-color: #ffb68c;
+    color: white;
+    border: none;
     border-radius: 15px;
-    margin-left:10px;
-  
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 25px auto 10px auto; /* Điều chỉnh margin */
 }
-.submit-button-muonsach:hover{
-    background-color: rgb(223, 166, 119);
-    color:rgb(255, 255, 255);  
+.submit_button_modal:hover {
+    background-color: #ff9b5e;
+}
+
+.error-message-modal, .success-message-modal {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.error-message-modal { color: #dc3545; }
+.success-message-modal { color: #28a745; }
+
+/* Styles specific to MuonSach modal */
+.search-button-modal {
+    background-color: #007bff;
+    border: none;
+    padding: 5px 8px;
+    margin-left: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-button-modal img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.search-button-modal:hover {
+    background-color: #0056b3;
+}
+
+.tableContainer_modal {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.tableContainer_modal h4 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.table_muonsach_modal {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85em; /* Hơi nhỏ hơn bảng chính */
+}
+
+.table_muonsach_modal th,
+.table_muonsach_modal td {
+    border: 1px solid #ddd;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.table_muonsach_modal th {
+    background-color: #f2f2f2;
+}
+
+.table_muonsach_modal input[type="text"] {
+    width: 95%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+
+.add-row-button-modal, .delete-row-button-modal {
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    border: 1px solid;
+    cursor: pointer;
+    font-weight: bold;
+}
+.add-row-button-modal {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+.add-row-button-modal:hover {
+    background-color: #218838;
+}
+.delete-row-button-modal {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+.delete-row-button-modal:hover {
+    background-color: #c82333;
 }
 

@@ -1,135 +1,87 @@
-import './lapbaocao.css'
-import { useState } from "react";
-import Pagination from './pagination';
-function Lapbaocao({hide}){
-    const [baocao,setbaocao] = useState('bc1')
+// import './lapbaocao.css' // Bạn có thể tạo file CSS riêng nếu cần style phức tạp hơn
+import React, { useState } from 'react';
+import apiClient from '../../api/apiClient';
+import './lapbaocao.css'; // Create this CSS file
+import './lapthedocgia.css'; // Tái sử dụng style từ lapthedocgia.css cho modal
+
+function Lapbaocao({ hide }) {
+    const [reportType, setReportType] = useState('muonTheoTheLoai'); // 'sachTraTre'
+    const [month, setMonth] = useState(new Date().getMonth() + 1);
+    const [year, setYear] = useState(new Date().getFullYear());
+    const [reportData, setReportData] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState('');
+
+    const handleGenerateReport = async () => {
+        setIsLoading(true);
+        setError('');
+        setReportData(null);
+        try {
+            if (reportType === 'muonTheoTheLoai') {
+                const response = await apiClient.get(`/reports/muon-theo-the-loai?month=${month}&year=${year}`);
+                setReportData(response.data);
+            }
+            // Add logic for BM7.2 (SachTraTre) here
+        } catch (err) {
+            console.error("Error generating report:", err);
+            setError(err.response?.data?.message || "Lỗi khi tạo báo cáo.");
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     return (
-        <div id="baocao">
-            <div className='title_'>Báo cáo</div>
-            <div className='underline_baocao'></div>
-            <button className='hide' onClick={hide}>
-                <img src="./src/assets/close.png"/>
-            </button>
-            <div className='div_miniwin' style={{width:"100%"}}>
-                <button className='baocao-button' onClick={() => setbaocao('bc1')}>Báo cáo 1</button>
-                <button className='baocao-button' onClick={() => setbaocao('bc2')}>Báo cáo 2</button>
+        <div className="modal-overlay"> {/* Bắt đầu return với modal-overlay */}
+            <div id="baocao_modal" style={{width: '800px', minHeight: '400px'}}> {/* Adjust size as needed */}
+                <button type="button" className="hide" onClick={hide}>×</button>
+                <div className='title_'>Lập Báo Cáo</div>
+                <div className='underline'></div>
+
+                <div className="div_miniwin" style={{justifyContent: 'space-between'}}>
+                    <div>
+                        <label className='label_lapthe' htmlFor="reportMonth">Tháng:</label>
+                        <input className='inp_miniwin' style={{width: '100px'}} type="number" id="reportMonth" value={month} onChange={e => setMonth(e.target.value)} min="1" max="12" />
+                    </div>
+                    <div>
+                        <label className='label_lapthe' htmlFor="reportYear">Năm:</label>
+                        <input className='inp_miniwin' style={{width: '120px'}} type="number" id="reportYear" value={year} onChange={e => setYear(e.target.value)} min="1900" />
+                    </div>
+                    <button className="submit-button" style={{margin: '0'}} onClick={handleGenerateReport} disabled={isLoading}>
+                        {isLoading ? 'Đang tạo...' : 'Xem báo cáo'}
+                    </button>
+                </div>
+
+                {error && <p className="error-message" style={{textAlign: 'center'}}>{error}</p>}
+
+                {reportData && reportType === 'muonTheoTheLoai' && (
+                    <div className="report-content" style={{marginTop: '20px'}}>
+                        <h3>Báo Cáo Tình Hình Mượn Sách Theo Thể Loại - Tháng {reportData.month}/{reportData.year}</h3>
+                        <table className="book_table" style={{maxWidth: '100%'}}> {/* Reuse book_table style */}
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên Thể Loại</th>
+                                    <th>Số Lượt Mượn</th>
+                                    <th>Tỉ Lệ (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {reportData.report.map((item, index) => (
+                                    <tr key={item.the_loai}>
+                                        <td>{index + 1}</td>
+                                        <td>{item.the_loai}</td>
+                                        <td>{item.so_luot_muon}</td>
+                                        <td>{item.ti_le}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                        <p style={{textAlign: 'right', marginTop: '10px'}}><b>Tổng số lượt mượn: {reportData.total_borrows}</b></p>
+                    </div>
+                )}
+                {/* Add rendering for BM7.2 here */}
             </div>
-            {baocao==='bc1' && <Bc1 />}
-            {baocao==='bc2' && <Bc2 />}
-            
         </div>
-    )
-}
-function Bc1(){
-    const result_bc1=[
-        {
-            stt: 1,
-            tentheloai: "Văn Học",
-            soluotmuon: 25,
-            tile: "20%"
-        },
-        {
-            stt: 2,
-            tentheloai: "Tiểu Thuyết", 
-            soluotmuon: 30,
-            tile: "24%"
-        }
-    ]
-    const [currentPage,setcurrentPage]=useState(1)
-    const lastIndex = currentPage*9
-    const firstIndex = lastIndex-9
-    const new_result = result_bc1.slice(firstIndex,lastIndex)
-
-    return (
-        <>
-            <div style={{textAlign:"center"}}>
-            <span style={{fontWeight:"bold",fontSize:"21px"}}>Báo Cáo Thông Kê Tình Hình Mượn Sách Theo Thể Loại</span>
-            <br />
-            <span>Tháng :</span>
-            </div>
-            <table className='table_muonsach' style={{marginTop:"10px",width:"800px"}}>
-                <thead>
-                    <tr>
-                        <th style={{width:"50px"}}>STT</th>
-                        <th style={{width:"180px"}}>Tên thể loại</th>
-                        <th style={{width:"180px"}}>Số lượt mượn</th>
-                        <th style={{width:"180px"}}>Tỉ lệ</th>      
-                    </tr>
-                </thead>
-                <tbody>
-                    {new_result.map((item)=>(
-                        <tr>
-                            <td>{item.stt}</td>
-                            <td>{item.tentheloai}</td>
-                            <td>{item.soluotmuon}</td>
-                            <td>{item.tile}</td>
-                        </tr>
-        
-                    ))}
-                </tbody>
-            </table>
-            <Pagination totalRows={result_bc1.length} rowsperPage={9} setcurrentPage={setcurrentPage}/>
-            <div style={{marginTop:"",marginLeft:"60%"}}>Tổng số lượt mượn : </div>
-
-        </>
-    )
-}
-function Bc2(){
-    const result_bc2=[
-        {
-            stt: 1,
-            tensach: "Lập trình C++",
-            ngaymuon: "01/01/2024", 
-            songaytre: 3
-        },
-        {
-            stt: 2,
-            tensach: "Giải tích 1",
-            ngaymuon: "02/01/2024",
-            songaytre: 5
-        },
-        {
-            stt: 3, 
-            tensach: "Đắc Nhân Tâm",
-            ngaymuon: "05/01/2024",
-            songaytre: 2
-        }
-    ]
-    const [currentPage,setcurrentPage]=useState(1)
-    const lastIndex = currentPage*8
-    const firstIndex = lastIndex-8
-    const new_result = result_bc2.slice(firstIndex,lastIndex)
-    return (
-        <>
-            <div style={{textAlign:"center"}}>
-            <span style={{fontWeight:"bold",fontSize:"21px"}}>Báo Cáo Thống Kê Sách Trả Trễ</span>
-            <br />
-            <span>Ngày :</span>
-            </div>
-            <table className='table_muonsach' style={{marginTop:"10px",width:"800px"}}>
-                <thead>
-                    <tr>
-                        <th style={{width:"50px"}}>STT</th>
-                        <th style={{width:"180px"}}>Tên sách</th>
-                        <th style={{width:"180px"}}>Ngày mượn</th>
-                        <th style={{width:"180px"}}>Số ngày trả trễ</th>      
-                    </tr>
-                </thead>
-                <tbody>
-                    {new_result.map((item)=>(
-                            <tr>
-                                <td>{item.stt}</td>
-                                <td>{item.tensach}</td>
-                                <td>{item.ngaymuon}</td>
-                                <td>{item.songaytre}</td>
-                            </tr>
-            
-                        ))}
-                </tbody>
-            </table>
-            <Pagination totalRows={result_bc2.length} rowsperPage={8} setcurrentPage={setcurrentPage}/>
-        </>
-    )
+    );
 }
 export default Lapbaocao;

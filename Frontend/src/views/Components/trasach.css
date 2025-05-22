@@ -1,6 +1,9 @@
-/* d:\project\CNPM_quanlythuvien_DCT121C3\Frontend\src\views\Components\phieuthutienphat.css */
+/* D:/project/CNPM_quanlythuvien_DCT121C3/Frontend/src/views/Components/trasach.css */
 
-/* Styles for the modal overlay (backdrop) - can be shared if in a global CSS */
+/* Kế thừa style modal chung từ lapthedocgia.css hoặc tiepnhansachmoi.css nếu muốn */
+/* Ví dụ: @import './lapthedocgia.css'; */
+
+/* Hoặc định nghĩa lại các style modal cơ bản */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -14,11 +17,11 @@
     z-index: 1000;
 }
 
-#phieuthu_modal { /* Changed ID to be more specific and avoid conflict if #phieuthu is used elsewhere */
+#trasach_modal { /* Specific ID for this modal */
     background-color: rgb(248, 232, 225);
-    width: 700px; /* Adjusted width */
-    min-height: 410px; /* Use min-height for flexibility */
-    position: relative; /* If overlay is flex, this doesn't need to be absolute for centering */
+    width: 850px; /* Adjusted width */
+    min-height: 500px;
+    position: relative;
     border-style: solid;
     border-radius: 10px;
     border-color: #ffb68c;
@@ -26,11 +29,11 @@
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 20px;
-    max-height: 90vh;
+    max-height: 95vh;
     overflow-y: auto;
 }
 
-.title_ { /* Reusing class from lapthedocgia.css for consistency */
+.title_modal { /* Reusing class from other modals if consistent */
     text-align: center;
     font-weight: bold;
     font-size: 20px;
@@ -40,7 +43,7 @@
     padding-bottom: 10px;
 }
 
-.underline { /* Reusing class */
+.underline_modal { /* Reusing class */
     position: absolute;
     width: 100px;
     height: 4px;
@@ -51,7 +54,7 @@
     transform: translateX(-50%);
 }
 
-.hide { /* Reusing class for close button */
+.hide_modal { /* Reusing class */
     position: absolute;
     background-color: transparent;
     border: none;
@@ -61,19 +64,19 @@
     color: #777;
     cursor: pointer;
 }
-.hide:hover {
+.hide_modal:hover {
     color: #333;
 }
 
-.label_lapthe { /* Reusing class */
-    width: 150px;
+.label_modal { /* Reusing class */
+    width: 150px; 
     font-weight: bold;
     color: #555;
     margin-right: 10px;
     flex-shrink: 0;
 }
 
-.inp_miniwin { /* Reusing class */
+.input_modal { /* Reusing class */
     flex-grow: 1;
     padding: 8px 12px;
     border: 2px solid #ffb68c;
@@ -82,19 +85,19 @@
     background-color: #fff;
 }
 
-.inp_miniwin:focus {
+.input_modal:focus {
     border-color: #ff7f2a;
     box-shadow: 0 0 0 3px rgba(255, 127, 42, 0.25);
     outline: none;
 }
 
-.div_miniwin { /* Reusing class */
-    margin-bottom: 15px;
+.div_input_group_modal { /* Reusing class */
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
 }
 
-.submit-button { /* Reusing class */
+.submit_button_modal { /* Reusing class */
     padding: 10px 20px;
     background-color: #ffb68c;
     color: white;
@@ -105,21 +108,48 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: block;
-    margin: 20px auto 0 auto;
+    margin: 25px auto 10px auto;
 }
-.submit-button:hover {
+.submit_button_modal:hover {
     background-color: #ff9b5e;
 }
 
-.error-message, .success-message { /* Reusing classes for messages */
+.error-message-modal, .success-message-modal { /* Reusing classes */
     text-align: center;
     margin-bottom: 10px;
     font-size: 0.9rem;
 }
-.error-message { color: #dc3545; }
-.success-message { color: green; } /* Added for success */
+.error-message-modal { color: #dc3545; }
+.success-message-modal { color: #28a745; }
 
-.search-button-modal { /* Style for search button if used */
+/* Styles specific to TraSach modal table if needed */
+.tableContainer_modal {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.tableContainer_modal h4 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.table_trasach_modal { /* Specific class for this table */
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85em;
+}
+
+.table_trasach_modal th,
+.table_trasach_modal td {
+    border: 1px solid #ddd;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.table_trasach_modal th {
+    background-color: #f2f2f2;
+}
+
+.search-button-modal { /* Copied from muonsach.css for consistency */
     background-color: #007bff;
     border: none;
     padding: 5px 8px;
@@ -128,8 +158,8 @@
     cursor: pointer;
 }
 .search-button-modal img {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
 }
 .search-button-modal:hover {

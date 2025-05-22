@@ -1,0 +1,69 @@
+/* D:/project/CNPM_quanlythuvien_DCT121C3/Frontend/src/views/Components/user_info.css */
+
+#user-info {
+    width: 20em; /* Same width as the menu for alignment */
+    background-color: var(--background-component, #ffffff);
+    border: 1px solid var(--border-color-strong, #ffb68c);
+    border-radius: var(--border-radius-lg, 10px);
+    padding: 25px; /* Tăng padding một chút */
+    margin-left: 20px; /* Align with menu */
+    margin-top: 50px; /* Đồng bộ với margin-top của menu */
+    box-shadow: var(--box-shadow-md, 0 4px 12px rgba(0, 0, 0, 0.1));
+    font-family: inherit; /* Inherit from body */
+}
+
+#user-info center {
+    font-size: var(--font-size-lg, 1.25rem);
+    font-weight: bold;
+    color: var(--primary-color, #ff7f2a);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color-light, #ffb68c);
+}
+
+.info {
+    display: flex;
+    margin-bottom: 12px;
+    font-size: var(--font-size-base, 1rem);
+}
+
+.label {
+    font-weight: 600; /* Semi-bold */
+    color: var(--text-medium, #555555);
+    width: 100px; /* Adjust as needed */
+    flex-shrink: 0;
+}
+
+.result {
+    color: var(--text-dark, #333333);
+    word-break: break-word; /* Prevent long emails/names from breaking layout */
+}
+
+.div-button {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between; /* Đẩy các nút ra hai bên */
+    gap: 10px; /* Thêm khoảng cách nhỏ giữa các nút nếu space-between không đủ */
+}
+
+.button {
+    padding: 8px 15px;
+    background-color: var(--primary-color-light, #ffb68c);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md, 8px);
+    font-size: var(--font-size-sm, 0.875rem);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Thêm transition cho transform */
+    flex-grow: 1; /* Cho phép các nút co giãn để chiếm không gian */
+    text-align: center; /* Căn giữa chữ trong nút */
+}
+
+.button:hover {
+    background-color: var(--primary-color, #ff7f2a);
+    transform: translateY(-1px); /* Hiệu ứng nhấc lên khi hover */
+}
+.button:active {
+    transform: translateY(0px); /* Hiệu ứng nhấn xuống */
+}

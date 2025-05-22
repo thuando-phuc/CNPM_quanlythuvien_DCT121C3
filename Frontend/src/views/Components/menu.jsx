@@ -6,11 +6,11 @@ function Menu({selection}){
        
             <div className="menu">
                 
-                <button className='selection_1' onClick={() => selection('lapthe')}>
-                    Lập thẻ độc giả
+                <button className='selection_1' onClick={() => selection('homeView')}>
+                    Trang chủ (DS Sách)
                 </button>
-                <button className='selection' onClick={() => selection('tiepnhan')}>
-                    Tiếp nhận sách mới
+                <button className='selection' onClick={() => selection('docgiaView')}>
+                    Danh sách thẻ độc giả
                 </button>
                 <button className='selection' onClick={() => selection('muonsach')}>
                     Cho mượn sách

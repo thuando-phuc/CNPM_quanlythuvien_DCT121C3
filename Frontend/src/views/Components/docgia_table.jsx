@@ -1,135 +1,74 @@
-import './docgia_table.css'
-import { useState } from 'react'
+import './docgia_table.css' // Import file CSS mới
+import { useState, useEffect } from 'react' // Thêm useEffect
 import Pagination from './pagination'
-function Docgia(){
-    //Truy vấn danh sách độc giả dán vào result
-    const result = [
-        {
-            madocgia: "DG001",
-            hovaten: "Nguyễn Văn An", 
-            diachi: "123 Lê Lợi, Q.1, TP.HCM",
-            email: "nguyenvanan@gmail.com", 
-            ngaysinh: "15/03/1995",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "01/01/2023"
-        },
-        {
-            madocgia: "DG002", 
-            hovaten: "Trần Thị Bình",
-            diachi: "456 Nguyễn Huệ, Q.3, TP.HCM",
-            email: "tranthibinh@gmail.com",
-            ngaysinh: "22/08/1998",
-            loaidocgia: "Sinh viên", 
-            ngaylapthe: "15/02/2023"
-        },
-        {
-            madocgia: "DG003",
-            hovaten: "Lê Hoàng Nam",
-            diachi: "789 Võ Văn Tần, Q.10, TP.HCM", 
-            email: "lehoangnam@gmail.com",
-            ngaysinh: "10/12/1990",
-            loaidocgia: "Giảng viên",
-            ngaylapthe: "01/03/2023"
-        },
-        {
-            madocgia: "DG004",
-            hovaten: "Phạm Minh Tuấn",
-            diachi: "147 Cách Mạng T8, Q.3, TP.HCM",
-            email: "phamminhtuan@gmail.com",
-            ngaysinh: "05/06/1992",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "20/03/2023"
-        },
-        {
-            madocgia: "DG005",
-            hovaten: "Hoàng Thị Mai",
-            diachi: "258 Điện Biên Phủ, Q.Bình Thạnh, TP.HCM",
-            email: "hoangthimai@gmail.com",
-            ngaysinh: "18/11/1994",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "05/04/2023"
-        },
-        {
-            madocgia: "DG006",
-            hovaten: "Vũ Đức Minh",
-            diachi: "369 Nguyễn Đình Chiểu, Q.3, TP.HCM",
-            email: "vuducminh@gmail.com",
-            ngaysinh: "30/09/1989",
-            loaidocgia: "Giảng viên",
-            ngaylapthe: "15/04/2023"
-        },
-        {
-            madocgia: "DG007",
-            hovaten: "Đặng Thu Hà",
-            diachi: "741 Trần Hưng Đạo, Q.5, TP.HCM",
-            email: "dangthuha@gmail.com",
-            ngaysinh: "25/04/1996",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "01/05/2023"
-        },
-        {
-            madocgia: "DG008",
-            hovaten: "Ngô Văn Hùng",
-            diachi: "852 Lý Thường Kiệt, Q.10, TP.HCM",
-            email: "ngovanhung@gmail.com",
-            ngaysinh: "12/07/1993",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "10/05/2023"
-        },
-        {
-            madocgia: "DG009",
-            hovaten: "Bùi Thị Lan",
-            diachi: "963 Nguyễn Thị Minh Khai, Q.1, TP.HCM",
-            email: "buithilan@gmail.com",
-            ngaysinh: "08/02/1997",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "20/05/2023"
-        },
-        {
-            madocgia: "DG010",
-            hovaten: "Trương Minh Đức",
-            diachi: "159 Hai Bà Trưng, Q.1, TP.HCM",
-            email: "truongminhduc@gmail.com",
-            ngaysinh: "14/10/1991",
-            loaidocgia: "Giảng viên",
-            ngaylapthe: "01/06/2023"
-        },
-        {
-            madocgia: "DG011",
-            hovaten: "Lý Thanh Hương",
-            diachi: "357 Lê Hồng Phong, Q.5, TP.HCM",
-            email: "lythanhhuong@gmail.com",
-            ngaysinh: "20/01/1999",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "15/06/2023"
-        },
-        {
-            madocgia: "DG012",
-            hovaten: "Đinh Công Thành",
-            diachi: "951 Nguyễn Trãi, Q.5, TP.HCM",
-            email: "dinhcongthanh@gmail.com",
-            ngaysinh: "03/08/1995",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "01/07/2023"
-        },
-        {
-            madocgia: "DG013",
-            hovaten: "Nguyễn Thị Hồng",
-            diachi: "123 Lý Thái Tổ, Q.10, TP.HCM", 
-            email: "nguyenthihong@gmail.com",
-            ngaysinh: "15/05/1997",
-            loaidocgia: "Sinh viên",
-            ngaylapthe: "15/07/2023"
-        },
-    ]
+import apiClient from '../../api/apiClient'; // Import apiClient
+
+function Docgia({ onOpenLapTheModal, refreshKey }){ // Add refreshKey prop
+    const [readers, setReaders] = useState([]); // State để lưu danh sách độc giả
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
     const [currentPage,setcurrentPage]=useState(1)
     const lastIndex = currentPage*12
     const firstIndex = lastIndex-12
-    const new_result = result.slice(firstIndex,lastIndex)
+    const currentReaders = readers.slice(firstIndex,lastIndex) // Sử dụng readers đã fetch
+
+    useEffect(() => {
+        const fetchReaders = async () => {
+            setIsLoading(true);
+            setError(null);
+            try {
+                const response = await apiClient.get('/docGia'); // API endpoint của bạn
+                setReaders(response.data);
+            } catch (err) {
+                console.error("Error fetching readers:", err);
+                setError("Không thể tải danh sách độc giả.");
+                // Xử lý lỗi xác thực nếu cần, tương tự như trong mainpage.jsx
+                if (err.response && (err.response.status === 401 || err.response.status === 403)) {
+                    // Có thể bạn muốn điều hướng về trang login ở đây nếu lỗi là 401
+                    // navigate('/login'); // Cần import useNavigate từ react-router-dom nếu dùng
+                    localStorage.removeItem('authToken'); // Hoặc chỉ xóa token
+                }
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchReaders();
+    }, [refreshKey]); // Add refreshKey to dependency array
+
+    // Helper function to format date (YYYY-MM-DD or similar to DD/MM/YYYY)
+    // Bạn có thể di chuyển hàm này ra một file utils nếu dùng ở nhiều nơi
+    const formatDate = (dateString) => {
+        if (!dateString) return 'N/A';
+        try {
+            const date = new Date(dateString);
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+            const year = date.getFullYear();
+            return `${day}/${month}/${year}`;
+        } catch (e) {
+            return dateString; // Return original if parsing fails
+        }
+    };
+
+    if (isLoading) {
+        return <p style={{ textAlign: 'center', marginTop: '20px' }}>Đang tải danh sách độc giả...</p>;
+    }
+
+    if (error) {
+        return <p style={{ color: 'red', textAlign: 'center', marginTop: '20px' }}>{error}</p>;
+    }
 
     return (
         <>
-           
+            {/* Container để căn chỉnh nút sang phải */}
+            <div className="add-reader-button-container">
+                <button onClick={onOpenLapTheModal} className="add-reader-button">
+                    + Thêm độc giả
+                </button>
+            </div>
+
+
             <div id="table_container">
                 <div className='number-page'>
                     <span style={{fontWeight:"bold"}}>-Trang {currentPage}-</span>
@@ -137,34 +76,37 @@ function Docgia(){
                 <table className="book_table">
                     <thead>
                         <tr>
-                            <th style={{width:"120px"}}>Mã độc giả</th>
-                            <th style={{width:"190px"}}>Họ và tên</th>
-                            <th style={{width:"350px"}}>Địa chỉ</th>
-                            <th style={{width:"200px"}}>Email</th>
-                            <th style={{width:"100px"}}>Ngày sinh</th>
-                            <th style={{width:"150px"}}>Loại độc giả</th>
-                            <th style={{width:"110px"}}>Ngày lập thẻ</th>
+                             <th style={{width:"50px"}}>Mã ĐG</th> {/* Giảm chiều rộng và rút gọn tiêu đề nếu cần */}
+                            <th style={{width:"150px"}}>Họ và tên</th>
+                            <th style={{width:"250px"}}>Địa chỉ</th>
+                            <th style={{width:"180px"}}>Email</th>
+                            <th style={{width:"50px"}}>Ngày sinh</th>
+                            <th style={{width:"50px"}}>Loại ĐG</th> {/* Rút gọn tiêu đề */}
+                            <th style={{width:"50px"}}>Ngày lập thẻ</th>
         
                         </tr>
                     </thead>
                     <tbody>
-                        {new_result.map((item) => (
-                            <>
-                            <tr>
-                                <td>{item.madocgia}</td>
-                                <td>{item.hovaten}</td>
-                                <td>{item.diachi}</td>
+                        {currentReaders.length > 0 ? (
+                            currentReaders.map((item) => (
+                            <tr key={item.ID}> {/* Sử dụng item.ID (hoặc khóa chính của bạn) làm key */}
+                                <td>{item.ID}</td> {/* Giả sử ID là mã độc giả */}
+                                <td>{item.ho_va_ten}</td>
+                                <td>{item.dia_chi}</td>
                                 <td>{item.email}</td>
-                                <td>{item.ngaysinh}</td>
-                                <td>{item.loaidocgia}</td>
-                                <td>{item.ngaylapthe}</td>
+                                <td>{formatDate(item.ngay_sinh)}</td>
+                                <td>{item.loai_doc_gia}</td> {/* Cần đảm bảo backend trả về tên loại thay vì chỉ mã nếu cần */}
+                                <td>{formatDate(item.ngay_lap_the)}</td>
                             </tr>
-                            </>
-                        ))}
-                    
+                            ))
+                        ) : (
+                            <tr>
+                                <td colSpan="7" style={{ textAlign: 'center' }}>Không có độc giả nào để hiển thị.</td>
+                            </tr>
+                        )}
                     </tbody>
                 </table>
-                <Pagination totalRows={result.length} rowsperPage={12} setcurrentPage={setcurrentPage}/>
+                <Pagination totalRows={readers.length} rowsperPage={12} setcurrentPage={setcurrentPage}/>
             </div>
             
             

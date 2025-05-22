@@ -1,13 +1,109 @@
-.chucnang_button{
-    width:100px;
-    height:20px;
-    background-color: rgb(245, 200, 164);
-    border-style:solid;
-    border-color:black;
-    border-radius: 15px;
-    margin-right:10px;
+/* d:\project\CNPM_quanlythuvien_DCT121C3\Frontend\src\views\Components\docgia_table.css */
+
+/* Style cho container chính của bảng độc giả */
+.docgia-view-container, /* Nếu bạn có một div bao ngoài component Docgia trong mainpage.jsx */
+#table_container { /* ID của div bao quanh bảng trong docgia_table.jsx */
+  margin-top: 20px;
+  /* padding: 20px; */ /* Có thể thêm padding nếu cần */
 }
-.chucnang_button:hover{
-    background-color: rgb(223, 166, 119);
-    color:rgb(255, 255, 255);  
+
+.docgia-view-container h2, /* Nếu bạn có tiêu đề cho view này */
+#table_container h2 { /* Nếu bạn thêm tiêu đề bên trong #table_container */
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+}
+
+/* Container cho nút "Thêm độc giả" */
+.add-reader-button-container {
+  display: flex;
+  justify-content: flex-end; /* Căn nút sang phải */
+  margin-bottom: 20px; /* Khoảng cách với bảng */
+  padding-right: 10px; /* Thêm chút padding nếu bảng không chiếm toàn bộ chiều rộng */
+}
+
+/* Nút "Thêm độc giả" */
+.add-reader-button {
+  padding: 10px 20px; /* Tăng padding cho nút to hơn */
+  cursor: pointer;
+  background-color: #ffb68c; /* Màu cam giống theme */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Bo góc nhiều hơn */
+  font-size: 16px;
+  font-weight: bold;
+  /* display: inline-block;  Không cần nữa khi dùng flexbox */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng chuyển động */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.add-reader-button:hover {
+  background-color: #ff9b5e; /* Màu cam đậm hơn khi hover */
+  transform: translateY(-1px); /* Hiệu ứng nhấc lên nhẹ khi hover */
+}
+.add-reader-button:active {
+  transform: translateY(0px); /* Hiệu ứng nhấn xuống */
+}
+
+/* Style cho bảng */
+#table_container .book_table { /* Sử dụng class .book_table như trong JSX */
+  /* width: 100%; */ /* Cân nhắc bỏ width 100% nếu muốn bảng co lại theo nội dung/max-width */
+  max-width: 1000px; /* Điều chỉnh để giống với max-width của bảng sách */
+  table-layout: fixed; /* Chuyển table-layout: fixed; vào đây */
+  border-collapse: collapse;
+  font-size: 0.9em;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border: 2px solid #ffb68c;
+  background-color: white;
+  margin-left: auto; /* Để căn giữa bảng nếu nó nhỏ hơn container */
+  margin-right: auto; /* Để căn giữa bảng nếu nó nhỏ hơn container */
+}
+
+#table_container .book_table th,
+#table_container .book_table td {
+  border-bottom: 1px solid #ffb68c;
+  border-left: 1px solid #ffb68c;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#table_container .book_table th:first-child,
+#table_container .book_table td:first-child {
+  border-left: none;
+}
+
+#table_container .book_table th {
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom-width: 3px;
+}
+
+/* Bo góc cho ô header */
+#table_container .book_table thead tr th:first-child {
+  border-top-left-radius: 7px;
+}
+
+#table_container .book_table thead tr th:last-child {
+  border-top-right-radius: 7px;
+}
+
+#table_container .book_table tbody tr:nth-child(even) {
+  background-color: #fff7f2;
+}
+
+#table_container .book_table tbody tr:hover {
+  background-color: #ffeee4;
+  cursor: pointer;
+}
+
+.number-page {
+    text-align: center;
+    margin-bottom: 10px;
 }
